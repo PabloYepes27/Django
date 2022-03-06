@@ -1,0 +1,17 @@
+DRF Tutorial
+
+Doubts:
+
+- from rest_framework import serializers
+  	- serializers.HyperlinkedModelSerializer
+	- que son las hyperlinked relations
+	https://www.geeksforgeeks.org/hyperlinkedmodelserializer-in-serializers-django-rest-framework/
+	https://www.django-rest-framework.org/api-guide/relations/
+
+- from rest_framework import viewsets
+	- viewsets.ModelViewSet
+	- qué son viewsets?
+		Los ViewSet son clases similares a las clases View, con la diferencia de que en lugar de proporcionar métodos de gestión como get y put, proporciona operaciones de read y update
+
+- from rest_framework import routers
+
