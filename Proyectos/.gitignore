@@ -1,3 +1,9 @@
 *.po
 *.mo
 entornos/
+.venv
+.env
+.environ
+env
+venv
+environ
