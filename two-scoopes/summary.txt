@@ -1,0 +1,88 @@
+1. Coding style
+
+    - Some approachs
+
+        - Avoid abbreviating variable names.
+        - Write out your function argument names.
+        - Document your classes and methods.
+        - Comment your code.
+        - Refactor repeated lines of code into reusable functions or methods.
+        - Keep functions and methods short. A good rule of thumb is that scrolling should not be necessary 
+        to read an entire function or method.
+
+    - The import order in a Django project is:
+
+        1 Standard library imports.
+        2 Imports from core Django.
+        3 Imports from third-party apps including those unrelated to Django.
+        4 Imports from the apps that you created as part of your Django project.
+
+    - Table 1.1: Imports: Absolute vs. Explicit Relative
+
+        -------------------------------------------------------------------------------------------------------------------------
+        |            Code                          Import Type                        Usage                                      |
+        -------------------------------------------------------------------------------------------------------------------------
+        | from core.views import FoodMixin        absolute import      Use when importing from outside the current app           |
+        | from .models import WaffleCone          explicit relative    Use when importing from another module in the current app |
+        -------------------------------------------------------------------------------------------------------------------------
+
+    - Use Underscores("_") in URL Pattern Names Rather Than Dashes
+
+
+2. The optimal django environment setup
+
+    - This chapter covered using the same database in development as in production, pip, virtualenv,
+      venv, conda, poetry, pipenv, version control, and Docker. These are good to have
+      in your tool chest, since they are commonly used not just in Django, but in the majority of
+      Python software development.
+
+
+3. How to Lay Out Django Projects
+
+    -   icecreamratings_project                 # repository_root/
+        ├── config/                             # configuration_root/
+        │ ├── settings/
+        │ ├── __init__.py
+        │ ├── asgi.py
+        │ ├── urls.py
+        │ └── wsgi.py
+        ├── docs/
+        ├── icecreamratings/                    # django_project_root/
+        │ ├── media/ # Development only!
+        │ ├── products/
+        │ ├── profiles/
+        │ ├── ratings/
+        │ ├── static/
+        │ └── templates/
+        ├── .gitignore
+        ├── Makefile
+        ├── README.md
+        ├── manage.py
+        └── requirements.txt
+
+    - We like to put all our environments in one directory and all our projects in another.
+    
+    ~/projects/icecreamratings_project/
+    ~/.envs/icecreamratings/
+
+
+4. Fundamentals of Django App Design
+
+    - Vocabulary
+        Django project:
+            is a web application powered by the Django web framework.
+        Django apps:
+            are small libraries designed to represent a single aspect of a project. (A Django
+            project is made up of many Django apps.)
+        Installed apps: 
+            is the list of Django apps used by a given project available in its
+            INSTALLED_APPS setting.
+        Third-party Django packages:
+            are simply pluggable, reusable Django apps that have been
+            packaged with the Python packaging tools
+    
+    - Each Django app should be tightly-focused on its own task and possess a simple, easy-to-remember name. If an app
+      seems too complex, it should be broken up into smaller apps.
+
+
+5. Settings and Requirements Files

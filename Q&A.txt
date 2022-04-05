@@ -1,0 +1,37 @@
+DJANGO Doubts:
+
+- from rest_framework import serializers
+	-  Qué son los serializers?
+		Los serializadores son unos de los componentes más poderosos que tiene Django Rest Framework. Estos permiten que estructuras complejas y modelos de nuestro proyecto en Django sean convertidos a estructuras nativas de Python y puedan ser convertidas fácilmente en JSON o XML .
+  	- serializers.HyperlinkedModelSerializer
+	- que son las hyperlinked relations
+	https://www.geeksforgeeks.org/hyperlinkedmodelserializer-in-serializers-django-rest-framework/
+	https://www.django-rest-framework.org/api-guide/relations/
+    - Serializer vs ModelSerializer
+
+- from rest_framework import viewsets
+	- viewsets.ModelViewSet
+	- qué son viewsets?
+		Los ViewSet son clases similares a las clases View, con la diferencia de que en lugar de proporcionar métodos de gestión como get y put, proporciona operaciones de read y update
+
+
+		After routing has determined which controller to use for a request, your controller is responsible for making sense of the request and producing the appropriate output. Django REST framework allows you to combine the logic for a set of related views in a single class, called a ViewSet .
+
+- from rest_framework import routers
+	- Qué son los routers?
+		Routers are used with ViewSets in django rest framework to auto config the urls. Routers provides a simple, quick and consistent way of wiring ViewSet logic to a set of URLs. Router automatically maps the incoming request to proper viewset action based on the request method type(i.e GET, POST, etc).
+
+- rest_framework.pagination
+
+- django form
+    - Form vs ModelForm
+
+- mixins
+	- It is a type of multiple inheritance which allows classes in Python to share methods between any class that inherits from that mixin. It is used when we want to implement a specific functionality in different classes.
+	- Mixins can be implemented by creating a class. Client classes then inherit the Mixin class, often with other mixin classes and possibly a concrete base class.
+	- https://whiztal.io/mixins-in-django-and-django-rest-framework/
+
+- @pytest.mark
+	- By using the pytest.mark helper you can easily set metadata on your test functions.
+	- @pytest.mark.django_db
+		- This is used to mark a test function as requiring the database. It will ensure the database is set up correctly for the test.
