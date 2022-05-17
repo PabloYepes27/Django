@@ -35,3 +35,4 @@ DJANGO Doubts:
 	- By using the pytest.mark helper you can easily set metadata on your test functions.
 	- @pytest.mark.django_db
 		- This is used to mark a test function as requiring the database. It will ensure the database is set up correctly for the test.
+
